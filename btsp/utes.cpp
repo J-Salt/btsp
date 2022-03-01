@@ -22,11 +22,22 @@ void copy(double dst[][2], int n, double src[][2]) {
 //this functions returns the cost of tour A (of length n).
 // don't forget that the distance from the end back to the start must be 
 // included.
+double costSingle(double A[][2], int a, int b) {
+  double diff1 = A[b][0] - A[a][0], diff2 = A[b][1] - A[a][1];
+  return sqrt(diff1 * diff1 + diff2 * diff2);
+}
+
 double cost(double A[][2], int n) {
   cout << "todo" << endl;
-
-  return 0;
+  double tcost = 0;
+  for (int i = 0; i < n-1; i++) {
+    tcost += costSingle(A, i, i + 1);
+  }
+  tcost += costSingle(A, n-1,0);
+  return tcost;
 }
+
+
 //---------------------------------------------------------------------------
 //non-recursive version of n factorial.  n! is returned.
 long fact(long n) {

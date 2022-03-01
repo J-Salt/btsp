@@ -36,7 +36,11 @@ int main(int argc, char* argv[]) {
       { 0.338385, 0.0315477 }
   };
 
-  randomize_in_place(tour, n);
+  double tcost =  cost(tour, n);
+
+  cout << tcost << endl;
+
+  /*randomize_in_place(tour, n);
   printf("before (cost=%f) : \n", cost(tour, n));
   print(tour, n);
   bruteForce5Loops(tour, n);
@@ -48,7 +52,7 @@ int main(int argc, char* argv[]) {
   print(tour, n);
   bruteForceRandom(tour, n, 240);
   printf("after (cost=%f) : \n", cost(tour, n));
-  print(tour, n);
+  print(tour, n);*/
 
   return 0;
 }
