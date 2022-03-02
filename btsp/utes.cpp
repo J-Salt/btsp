@@ -42,8 +42,11 @@ double cost(double A[][2], int n) {
 //non-recursive version of n factorial.  n! is returned.
 long fact(long n) {
   cout << "todo" << endl;
-
-  return 0;
+  long factorial = 1;
+  for (int i = n; i > 0; i--) {
+    factorial *= i;
+  }
+  return factorial;
 }
 //---------------------------------------------------------------------------
 //recursive version of n factorial.  n! is returned.
