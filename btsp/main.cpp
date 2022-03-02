@@ -39,10 +39,7 @@ int main(int argc, char* argv[]) {
   double tcost =  cost(tour, n);
   long fac = factRecursive(n);
 
-  print(tour,n);
-  cout << fac << endl;
-  cout << tcost << endl;
-
+  randomize_in_place(tour, n);
   /*randomize_in_place(tour, n);
   printf("before (cost=%f) : \n", cost(tour, n));
   print(tour, n);
