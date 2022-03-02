@@ -22,6 +22,15 @@ extern void randomize_in_place(double A[][2], int n);
 // double  (*tmp)[2] = new double[n][2];  //tmp is a ptr to pairs of doubles
 void bruteForceRandom(double A[][2], int n, long repeats) {
   cout << "todo" << endl;
+  double bestCost = INT_MAX;
+  double currCost;
+  for (int i = 0; i < repeats; i++) {
+    randomize_in_place(A, n);
+    currCost = cost(A, n);
+    if (currCost < bestCost) {
+      bestCost = currCost;
+    }
+  }
 }
 //---------------------------------------------------------------------------
 //this function generates (exactly) all permutations of the tour A.
