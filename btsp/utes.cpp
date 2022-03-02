@@ -75,21 +75,17 @@ void randomize_in_place(double A[][2], int n) {
   cout << "todo" << endl;
   uniform_int_distribution<int> uid(0, n - 1);
   int randomPos[] = { 0,1,2,3,4 };
-  int j, temp;
+  int j;
   double tempX, tempY;
   for (int i = n-1; i > 0; i--) {
     j = uid(g);
-    temp = randomPos[i];
-    randomPos[i] = randomPos[j];
-    randomPos[j] = temp;
-  }
-  for (int i = 0; i < n; i++) {
     tempX = A[i][0];
     tempY = A[i][1];
-    A[i][0] = A[randomPos[i]][0];
-    A[i][1] = A[randomPos[i]][1];
-    A[randomPos[i]][0] = tempX;
-    A[randomPos[i]][1] = tempY;
+    A[i][0] = A[j][0];
+    A[i][1] = A[j][1];
+    A[j][0] = tempX;
+    A[j][1] = tempY;
   }
+  print(A, n);
 }
 //---------------------------------------------------------------------------
