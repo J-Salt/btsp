@@ -37,7 +37,8 @@ int main(int argc, char* argv[]) {
   };
 
   double tcost =  cost(tour, n);
-
+  long fac = factRecursive(n);
+  cout << fac << endl;
   cout << tcost << endl;
 
   /*randomize_in_place(tour, n);
