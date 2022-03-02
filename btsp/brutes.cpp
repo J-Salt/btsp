@@ -32,6 +32,7 @@ void bruteForceRandom(double A[][2], int n, long repeats) {
       copy(tmp,n,A);
     }
   }
+  copy(A,n,tmp);
 }
 //---------------------------------------------------------------------------
 //this function generates (exactly) all permutations of the tour A.
