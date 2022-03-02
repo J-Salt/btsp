@@ -16,7 +16,6 @@ mt19937_64 g;  //our random number generator
 // length n. the caller must properly init and allocate the tours. this is
 // useful for keeping a copy of the best so far.
 void copy(double dst[][2], int n, double src[][2]) {
-  cout << "todo" << endl;
   for (int i = 0; i < n; i++) {
     dst[i][0] = src[i][0];
     dst[i][1] = src[i][1];
@@ -32,7 +31,7 @@ double costSingle(double A[][2], int a, int b) {
 }
 
 double cost(double A[][2], int n) {
-  cout << "todo" << endl;
+  
   double tcost = 0;
   for (int i = 0; i < n-1; i++) {
     tcost += costSingle(A, i, i + 1);
@@ -45,7 +44,7 @@ double cost(double A[][2], int n) {
 //---------------------------------------------------------------------------
 //non-recursive version of n factorial.  n! is returned.
 long fact(long n) {
-  cout << "todo" << endl;
+  
   long factorial = 1;
   for (int i = n; i > 0; i--) {
     factorial *= i;
@@ -55,7 +54,6 @@ long fact(long n) {
 //---------------------------------------------------------------------------
 //recursive version of n factorial.  n! is returned.
 long factRecursive(long n) {
-  cout << "todo" << endl;
   if (n == 1) {
     return n;
   }
@@ -64,7 +62,6 @@ long factRecursive(long n) {
 //---------------------------------------------------------------------------
 //pretty print (to cout or stdout) tour A of length n.
 void print(double A[][2], int n) {
-  cout << "todo" << endl;
   for (int i = 0; i < n; i++) {
     cout << "{ " << A[i][0] << ", " << A[i][1] << " }" << endl;
   }
@@ -72,7 +69,6 @@ void print(double A[][2], int n) {
 //---------------------------------------------------------------------------
 //randomize tour A of length n in place
 void randomize_in_place(double A[][2], int n) {
-  cout << "todo" << endl;
   uniform_int_distribution<int> uid(0, n - 1);
   int randomPos[] = { 0,1,2,3,4 };
   int j;
@@ -86,6 +82,5 @@ void randomize_in_place(double A[][2], int n) {
     A[j][0] = tempX;
     A[j][1] = tempY;
   }
-  print(A, n);
 }
 //---------------------------------------------------------------------------
