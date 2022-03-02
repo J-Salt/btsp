@@ -52,8 +52,10 @@ long fact(long n) {
 //recursive version of n factorial.  n! is returned.
 long factRecursive(long n) {
   cout << "todo" << endl;
-
-  return 0;
+  if (n == 1) {
+    return n;
+  }
+  return n * factRecursive(n - 1);
 }
 //---------------------------------------------------------------------------
 //pretty print (to cout or stdout) tour A of length n.
