@@ -38,6 +38,8 @@ int main(int argc, char* argv[]) {
 
   double tcost =  cost(tour, n);
   long fac = factRecursive(n);
+
+  print(tour,n);
   cout << fac << endl;
   cout << tcost << endl;
 
