@@ -61,6 +61,9 @@ long factRecursive(long n) {
 //pretty print (to cout or stdout) tour A of length n.
 void print(double A[][2], int n) {
   cout << "todo" << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "{ " << A[i][0] << ", " << A[i][1] << " }" << endl;
+  }
 }
 //---------------------------------------------------------------------------
 //randomize tour A of length n in place
