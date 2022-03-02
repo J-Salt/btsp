@@ -35,25 +35,21 @@ int main(int argc, char* argv[]) {
       { 0.414236, 0.6135660 },
       { 0.338385, 0.0315477 }
   };
-
-  double tcost =  cost(tour, n);
-  long fac = factRecursive(n);
-
-  randomize_in_place(tour, n);
+  
   /*randomize_in_place(tour, n);
   printf("before (cost=%f) : \n", cost(tour, n));
   print(tour, n);
   bruteForce5Loops(tour, n);
   printf("after (cost=%f) : \n", cost(tour, n));
-  print(tour, n);
-
-  randomize_in_place(tour, n);
-  printf("before (cost=%f) : \n", cost(tour, n));
-  print(tour, n);
-  bruteForceRandom(tour, n, 240);
-  printf("after (cost=%f) : \n", cost(tour, n));
   print(tour, n);*/
-
+  for (int i = 0; i < 10; i++) {
+    randomize_in_place(tour, n);
+    printf("before (cost=%f) : \n", cost(tour, n));
+    print(tour, n);
+    bruteForceRandom(tour, n, 1000);
+    printf("after (cost=%f) : \n", cost(tour, n));
+    print(tour, n);
+  }
   return 0;
 }
 //---------------------------------------------------------------------------

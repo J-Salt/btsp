@@ -21,14 +21,15 @@ extern void randomize_in_place(double A[][2], int n);
 // note: to dynamically allocate 2D arrays, user the following:
 // double  (*tmp)[2] = new double[n][2];  //tmp is a ptr to pairs of doubles
 void bruteForceRandom(double A[][2], int n, long repeats) {
-  cout << "todo" << endl;
+  double (*tmp)[2] = new double[n][2];
   double bestCost = INT_MAX;
   double currCost;
   for (int i = 0; i < repeats; i++) {
     randomize_in_place(A, n);
     currCost = cost(A, n);
-    if (currCost < bestCost) {
+    if (currCost <= bestCost) {
       bestCost = currCost;
+      copy(tmp,n,A);
     }
   }
 }
@@ -40,7 +41,6 @@ void bruteForceRandom(double A[][2], int n, long repeats) {
 long bruteForce5Loops(double A[][2], int n) {
   assert(n == 5);  //only works for n=5
   long count = 0;
-  cout << "todo" << endl;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
       for (int k = 0; k < n; k++) {
