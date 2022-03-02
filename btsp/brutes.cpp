@@ -40,7 +40,9 @@ void bruteForceRandom(double A[][2], int n, long repeats) {
 long bruteForce5Loops(double A[][2], int n) {
   assert(n == 5);  //only works for n=5
   cout << "todo" << endl;
+  for (int i = 0; i < n; i++) {
 
+  }
   return 0;
 }
 //---------------------------------------------------------------------------
