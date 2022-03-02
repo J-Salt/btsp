@@ -17,6 +17,10 @@ mt19937_64 g;  //our random number generator
 // useful for keeping a copy of the best so far.
 void copy(double dst[][2], int n, double src[][2]) {
   cout << "todo" << endl;
+  for (int i = 0; i < n; i++) {
+    dst[i][0] = src[i][0];
+    dst[i][1] = src[i][1];
+  }
 }
 //---------------------------------------------------------------------------
 //this functions returns the cost of tour A (of length n).
@@ -69,5 +73,23 @@ void print(double A[][2], int n) {
 //randomize tour A of length n in place
 void randomize_in_place(double A[][2], int n) {
   cout << "todo" << endl;
+  uniform_int_distribution<int> uid(0, n - 1);
+  int randomPos[] = { 0,1,2,3,4 };
+  int j, temp;
+  double tempX, tempY;
+  for (int i = n-1; i > 0; i--) {
+    j = uid(g);
+    temp = randomPos[i];
+    randomPos[i] = randomPos[j];
+    randomPos[j] = temp;
+  }
+  for (int i = 0; i < n; i++) {
+    tempX = A[i][0];
+    tempY = A[i][1];
+    A[i][0] = A[randomPos[i]][0];
+    A[i][1] = A[randomPos[i]][1];
+    A[randomPos[i]][0] = tempX;
+    A[randomPos[i]][1] = tempY;
+  }
 }
 //---------------------------------------------------------------------------
