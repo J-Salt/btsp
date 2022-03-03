@@ -10,7 +10,6 @@ extern void copy(double A[][2], int n, double B[][2]);
 extern double cost(double A[][2], int n);
 extern void print(double A[][2], int n);
 extern void randomize_in_place(double A[][2], int n);
-extern double costSingle(double A[][2], int a, int b);
 //---------------------------------------------------------------------------
 //this function (hopefully - no guarantees) finds the optimal solution by
 // repeatedly calling randomize_in_place while keeping track of the best
