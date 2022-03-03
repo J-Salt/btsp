@@ -36,12 +36,12 @@ int main(int argc, char* argv[]) {
       { 0.338385, 0.0315477 }
   };
   
-  /*randomize_in_place(tour, n);
+  randomize_in_place(tour, n);
   printf("before (cost=%f) : \n", cost(tour, n));
   print(tour, n);
   bruteForce5Loops(tour, n);
   printf("after (cost=%f) : \n", cost(tour, n));
-  print(tour, n);*/
+  print(tour, n);
   randomize_in_place(tour, n);
   printf("before (cost=%f) : \n", cost(tour, n));
   print(tour, n);
